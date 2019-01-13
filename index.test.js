@@ -3,7 +3,8 @@ expect  = require('chai').expect
 should = require('chai').should();
 const  {
     alwaysTrue,
-    ligitString
+    ligitString,
+    Abtest
 }=require('./index');
 
 //const alwaysTrue = require('./index');
@@ -51,4 +52,8 @@ describe('#legitstring',()=>{
     {
         ligitString(333).should.be.false;
     } );
+    it ('anTest should be true',()=>
+    {
+        Abtest(10).should.be.false;
+    });
 });
