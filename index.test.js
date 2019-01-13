@@ -2,7 +2,8 @@ log  = console.log
 expect  = require('chai').expect 
 should = require('chai').should();
 const  {
-    alwaysTrue
+    alwaysTrue,
+    ligitString
 }=require('./index');
 
 //const alwaysTrue = require('./index');
@@ -35,4 +36,19 @@ describe ('#alwaysTrue',()=>
     {
         expect(alwaysTrue()).to.be.true;
     });
+
+    
+});
+describe('#legitstring',()=>{
+    it('detect cow as string',()=>{
+        ligitString('cow').should.be.true;
+    });
+    it('undefined should not be true',()=>
+    {
+        ligitString(undefined).should.be.false;
+    });
+    it ('it should be string',()=>
+    {
+        ligitString(333).should.be.false;
+    } );
 });
