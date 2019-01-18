@@ -11,8 +11,37 @@ function Abtest (par)
     
     return false;
 }
+function compare(parValue)
+{
+    if (parValue >5 )
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+function valueAdd (parm1,parm2)
+{
+    return parm1+parm2;
+}
+function ValueCampare (parm1,parm2)
+{
+    if (_.isString(parm1 || parm2))
+    {
+        return false;
+    }    
+        
+    return parm1>parm2;
+}
 module.exports = {
     alwaysTrue,
     ligitString,
-    Abtest
+    Abtest,
+    compare,
+    valueAdd,
+    ValueCampare
 }
+

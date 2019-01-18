@@ -4,7 +4,10 @@ should = require('chai').should();
 const  {
     alwaysTrue,
     ligitString,
-    Abtest
+    Abtest,
+    compare,
+    valueAdd,
+    ValueCampare
 }=require('./index');
 
 //const alwaysTrue = require('./index');
@@ -65,3 +68,30 @@ describe('#legitstring',()=>{
      });
 
 });
+
+describe('#ccompare testing',()=>{
+    it('compare 2 to be false',()=>{
+        compare(2).should.be.false;
+    });
+    it ('compare 10 to be true',()=>{
+        compare(12).should.be.true;
+    });
+});
+
+describe('#Addation testing',()=>{
+    it ('add values to ..',()=>{
+        expect(valueAdd(12,12)).to.equal(24);
+    });
+    it('add value not equall',()=>{
+        expect(valueAdd(10,10)).to.not.equal(120);
+    } );
+});
+
+describe('#Number Value comparision',()=>{
+    it('to be true parm1 > parm2',()=>{
+        expect(ValueCampare(10,9)).to.be.true;
+    });
+    it('if passed string',()=>{
+        expect(ValueCampare("10",9)).to.be.false;
+    });
+} );
