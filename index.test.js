@@ -1,6 +1,7 @@
 log  = console.log
 expect  = require('chai').expect 
 should = require('chai').should();
+assert  = require('assert'); // we can use assert library
 const  {
     alwaysTrue,
     ligitString,
@@ -94,4 +95,28 @@ describe('#Number Value comparision',()=>{
     it('if passed string',()=>{
         expect(ValueCampare("10",9)).to.be.false;
     });
+
+    it('parm2>parm1 to be false',()=>{
+        ValueCampare(10,20).should.be.false;
+    });
+
+    it('expect  to be false',()=>{
+        var result = ValueCampare(10,20);
+        result.should.be.false;
+    });
+
+    it('assert to be true',()=>{
+        var result = ValueCampare(20,10);
+        
+        assert.equal(result,true);
+    });
+    
+} );
+
+describe('#Asser Add Value',()=>{
+    it('add value to get result to be true',()=>{
+        var result  = valueAdd(20,10);
+        assert.equal(result,30);
+    });
+
 } );
