@@ -36,12 +36,20 @@ function ValueCampare (parm1,parm2)
         
     return parm1>parm2;
 }
+
+function arrayValues ()
+{
+    var result  = [1,2,3,4,5,6];
+    return result;
+}
+
 module.exports = {
     alwaysTrue,
     ligitString,
     Abtest,
     compare,
     valueAdd,
-    ValueCampare
+    ValueCampare,
+    arrayValues
 }
 

@@ -8,7 +8,8 @@ const  {
     Abtest,
     compare,
     valueAdd,
-    ValueCampare
+    ValueCampare,
+    arrayValues
 }=require('./index');
 
 //const alwaysTrue = require('./index');
@@ -119,4 +120,14 @@ describe('#Asser Add Value',()=>{
         assert.equal(result,30);
     });
 
+} );
+
+describe ('#Check Array',()=>{
+    it('array value return expect',()=>{
+        var expected  =  [1,2,3,4,5,6];
+        assert.deepEqual(arrayValues(),expected);
+    });
+    it('array should contain value 3',()=>{
+        arrayValues().should.include(3);
+    } );
 } );
