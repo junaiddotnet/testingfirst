@@ -52,8 +52,16 @@ describe('#legitstring',()=>{
     {
         ligitString(333).should.be.false;
     } );
-    it ('anTest should be true',()=>
+    it ('abTest function should be false',()=>
     {
         Abtest(10).should.be.false;
     });
+    it ('AbTest should be true',()=> {
+        Abtest("junaid").should.be.true;
+    });
+    it ('AbExpect to to true',()=>
+     {
+        expect(Abtest("junaid")).to.be.true;
+     });
+
 });
