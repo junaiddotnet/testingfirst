@@ -130,4 +130,31 @@ describe ('#Check Array',()=>{
     it('array should contain value 3',()=>{
         arrayValues().should.include(3);
     } );
+    it('array should not contain value 3',()=>{
+        arrayValues().should.include(3);
+    } );
+
+    
 } );
+
+describe ('#add value unit test',()=>{
+    context('with low values',()=>{
+        it('add parm1 and parm2 value should',()=>{
+            valueAdd(10,10).should.be.equal(20);
+        } );
+
+        it('add parm1 and parm2 value expect',()=>{
+            expect(valueAdd(10,10)).to.equal(20);
+        } );
+    });
+    context('with Hight values',()=>{
+        it('add parm1 and parm2 value should',()=>{
+            valueAdd(100,100).should.be.equal(200);
+        } );
+
+        it('add parm1 and parm2 value expect',()=>{
+            expect(valueAdd(100,100)).to.equal(200);
+        } );
+    });
+
+});
