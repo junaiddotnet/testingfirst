@@ -1,6 +1,8 @@
 log  = console.log
 expect  = require('chai').expect 
 should = require('chai').should();
+chai = require('chai');
+app = require('./app');
 assert  = require('assert'); // we can use assert library
 const  {
     alwaysTrue,
@@ -158,3 +160,12 @@ describe ('#add value unit test',()=>{
     });
 
 });
+
+describe('#node js route testing',()=>{
+    it('get checked all students',()=>{
+       app.get('/',(err,res)=>{
+        res.should.have.status(1200);
+       });
+      
+    });
+} );
